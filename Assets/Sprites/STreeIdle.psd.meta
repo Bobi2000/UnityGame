@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0ede2cf1c11c3fd4bb346d09bf7de542
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +9,11 @@ TextureImporter:
     21300006: STreeIdle_3
     21300008: STreeIdle_4
     21300010: STreeIdle_5
+=======
+guid: 43dcf0be597f8934e886d98a9b8f99dd
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> a82b6fcaf2b36454c6ec921f26bfcd8af9ac194a
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -37,7 +43,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
+=======
+    filterMode: -1
+>>>>>>> a82b6fcaf2b36454c6ec921f26bfcd8af9ac194a
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -46,7 +56,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> a82b6fcaf2b36454c6ec921f26bfcd8af9ac194a
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,6 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -81,6 +96,9 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> a82b6fcaf2b36454c6ec921f26bfcd8af9ac194a
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,6 +106,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: STreeIdle_0
@@ -213,6 +232,13 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 87dd288785c3bcf4d8aa8a6c3c2a218e
+=======
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 808fd1850c153ab4287324cbb8cf316e
+>>>>>>> a82b6fcaf2b36454c6ec921f26bfcd8af9ac194a
     vertices: []
     indices: 
     edges: []
