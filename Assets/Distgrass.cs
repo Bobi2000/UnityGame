@@ -19,7 +19,7 @@ public class Distgrass : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            anim.SetTrigger("DistGrassG");
+            anim.SetTrigger("Dist");
         }
         
     }
