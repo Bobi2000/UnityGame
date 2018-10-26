@@ -1,42 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GrassMovment : MonoBehaviour {
-
+public class GrassMovment : MonoBehaviour
+{
     public BoxCollider2D Grass;
 
-    Animator anim;
+    private Animator anim;
 
-	
-	// Update is called once per frame
-	void Update () {
-
+    public void Update()
+    {
         anim = GetComponent<Animator>();
-
-	}
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        if(Grass)
+
+        if (Grass)
         {
-
             anim.SetInteger("Dist", 1);
-
         }
 
     }
-
 
     private void OnTriggerExit2D(Collider2D other)
     {
 
         if (Grass)
         {
-
             anim.SetInteger("Dist", 0);
-
         }
 
     }
