@@ -17,12 +17,11 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-
-
             float moveVectorX = Input.GetAxis("Horizontal");
             float moveVectorY = Input.GetAxis("Vertical");
 
-            if (Input.GetKey(KeyCode.S) && !CharacterAnim.GetBool("IsDown"))
+            //&& !CharacterAnim.GetBool("IsDown")
+            if (Input.GetKey(KeyCode.S) )
             {
                 CharacterAnim.SetBool("IsDown", true);
             }
@@ -31,7 +30,8 @@ public class CharacterMovement : MonoBehaviour
                 CharacterAnim.SetBool("IsDown", false);
             }
 
-            if (Input.GetKey(KeyCode.W) && !CharacterAnim.GetBool("IsUp"))
+            //&& !CharacterAnim.GetBool("IsUp")
+            if (Input.GetKey(KeyCode.W) )
             {
                 CharacterAnim.SetBool("IsUp", true);
             }
@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
                 CharacterAnim.SetBool("IsUp", false);
             }
 
-            if (Input.GetKey(KeyCode.A) && !CharacterAnim.GetBool("IsLeft"))
+            if (Input.GetKeyDown(KeyCode.A) && !CharacterAnim.GetBool("IsLeft"))
             {
                 CharacterAnim.SetBool("IsLeft", true);
             }
@@ -49,7 +49,7 @@ public class CharacterMovement : MonoBehaviour
                 CharacterAnim.SetBool("IsLeft", false);
             }
 
-            if (Input.GetKey(KeyCode.D) && !CharacterAnim.GetBool("IsRight"))
+            if (Input.GetKeyDown(KeyCode.D) && !CharacterAnim.GetBool("IsRight"))
             {
                 CharacterAnim.SetBool("IsRight", true);
             }
@@ -59,6 +59,13 @@ public class CharacterMovement : MonoBehaviour
             }
 
             this.transform.Translate(moveVectorX * this.MovementSpeed * Time.deltaTime, moveVectorY * this.MovementSpeed * Time.deltaTime, 0f);
+        }
+        else
+        {
+            CharacterAnim.SetBool("IsDown", false);
+            CharacterAnim.SetBool("IsUp", false);
+            CharacterAnim.SetBool("IsLeft", false);
+            CharacterAnim.SetBool("IsRight", false);
         }
     }
 }
