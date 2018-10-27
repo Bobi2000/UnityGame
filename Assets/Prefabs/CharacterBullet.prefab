@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4598235986665058}
   - component: {fileID: 212494483953911922}
   - component: {fileID: 50541948392853006}
-  - component: {fileID: 114708805560901018}
+  - component: {fileID: 58695718642716900}
+  - component: {fileID: 114871808410037534}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: CharacterBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1015421645853962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 0, z: 0}
+  m_LocalPosition: {x: -22.651688, y: -1.245, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +63,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114708805560901018
+--- !u!58 &58695718642716900
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015421645853962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.3}
+  serializedVersion: 2
+  m_Radius: 2.7
+--- !u!114 &114871808410037534
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,10 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015421645853962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32f785f94cf7a9d46a58aca1e673336b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1eb1364dccbc54c4eb644e5ddcb5ad1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToDestroy: 10
+  TimeToDestroy: 6
+  OnBulletDestroy: {fileID: 198864481732729242, guid: 9df2c23c4453df145b8765001df83134,
+    type: 2}
 --- !u!212 &212494483953911922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -110,7 +128,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: da45a16ce4e8e084eac89621eba8aaca, type: 3}
-  m_Color: {r: 0.11372549, g: 0.039215688, b: 0, a: 1}
+  m_Color: {r: 0.9056604, g: 0.35427997, b: 0.06407974, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
