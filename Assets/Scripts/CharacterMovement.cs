@@ -15,7 +15,8 @@ public class CharacterMovement : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        //Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)
+        if (true)
         {
             float moveVectorX = Input.GetAxis("Horizontal");
             float moveVectorY = Input.GetAxis("Vertical");
