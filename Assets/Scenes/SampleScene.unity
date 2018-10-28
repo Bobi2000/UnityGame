@@ -6080,6 +6080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616760482}
   - component: {fileID: 616760481}
+  - component: {fileID: 616760483}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -6140,12 +6141,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 616760480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 0.81, z: 0}
+  m_LocalPosition: {x: -0.72, y: 1.09, z: 0}
   m_LocalScale: {x: 0.110786416, y: 0.110786416, z: 0.110786416}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616760483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616760480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41460ecca4fb0464dbf494e50e0b8395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 817171257}
 --- !u!1 &636699013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1879219341492968, guid: 6c5b6d9f6682b20458bf2a192d7e1d30,
@@ -6309,7 +6322,7 @@ Prefab:
     - target: {fileID: 114746787843547568, guid: e905e3f7f45a76745890d7c6d2ebdc23,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114746787843547568, guid: e905e3f7f45a76745890d7c6d2ebdc23,
         type: 2}

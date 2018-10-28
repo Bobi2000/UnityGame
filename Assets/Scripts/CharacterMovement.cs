@@ -61,12 +61,12 @@ public class CharacterMovement : MonoBehaviour
 
             this.transform.Translate(moveVectorX * this.MovementSpeed * Time.deltaTime, moveVectorY * this.MovementSpeed * Time.deltaTime, 0f);
         }
-        else
-        {
-            CharacterAnim.SetBool("IsDown", false);
-            CharacterAnim.SetBool("IsUp", false);
-            CharacterAnim.SetBool("IsLeft", false);
-            CharacterAnim.SetBool("IsRight", false);
-        }
+       //else
+       //{
+       //    CharacterAnim.SetBool("IsDown", false);
+       //    CharacterAnim.SetBool("IsUp", false);
+       //    CharacterAnim.SetBool("IsLeft", false);
+       //    CharacterAnim.SetBool("IsRight", false);
+       //}
     }
 }
