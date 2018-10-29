@@ -2,7 +2,7 @@
 
 public class CharacterShooting : MonoBehaviour
 {
-    public float BulletSpeed = 200f;
+    public float BulletSpeed = 2f;
     public float AttackSpeed = 0.7f;
 
     public Rigidbody2D projectile;
@@ -23,28 +23,25 @@ public class CharacterShooting : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (IsAttackReady)
+        if (Input.GetKey(KeyCode.UpArrow) && IsAttackReady)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                direction = UpLauncher.up;
-                this.Shoot(direction, UpLauncher);
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                direction = LeftLauncher.right;
-                this.Shoot(direction, LeftLauncher);
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                direction = RightLauncher.right * -1;
-                this.Shoot(direction, RightLauncher);
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                direction = DownLauncher.up * -1;
-                this.Shoot(direction, DownLauncher);
-            }
+            direction = UpLauncher.up;
+            this.Shoot(direction, UpLauncher);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) && IsAttackReady)
+        {
+            direction = LeftLauncher.right;
+            this.Shoot(direction, LeftLauncher);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow) && IsAttackReady)
+        {
+            direction = RightLauncher.right * -1;
+            this.Shoot(direction, RightLauncher);
+        }
+        if (Input.GetKey(KeyCode.DownArrow) && IsAttackReady)
+        {
+            direction = DownLauncher.up * -1;
+            this.Shoot(direction, DownLauncher);
         }
         else
         {
@@ -65,6 +62,8 @@ public class CharacterShooting : MonoBehaviour
         Rigidbody2D projectileInstance;
         projectileInstance = Instantiate(projectile, launcher.position, Quaternion.identity);
         projectileInstance.AddForce(direction * this.BulletSpeed);
+        //projectileInstance.transform.Translate(direction);
+        //projectileInstance.transform.Translate(direction * this.BulletSpeed * Time.deltaTime);
         IsAttackReady = false;
     }
 }

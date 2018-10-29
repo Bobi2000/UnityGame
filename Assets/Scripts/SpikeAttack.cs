@@ -3,24 +3,30 @@
 public class SpikeAttack : MonoBehaviour
 {
     public Transform Player;
-    int MoveSpeed = 4;
+    int MoveSpeed = 7;
     int MaxDist = 10;
     int MinDist = 5;
 
-    void Update()
-    {
-        //transform.LookAt(Player);
+    private Vector3 spikePosition;
 
-        //if (Vector3.Distance(transform.position, Player.position) >= MinDist)
-        //{
+    private Vector3 velocity = Vector3.zero;
+    private float SmoothTime = 0.3f;
+
+    public void Update()
+    {
+
+        Vector3 goalPos = Player.position;
+
+        //goalPos.y = transform.position.y;
+        //goalPos.x = transform.position.x;
+
+        transform.position = Vector3.SmoothDamp(transform.position, goalPos, ref velocity, SmoothTime, this.MoveSpeed);
+
         transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
         {
-            //Here Call any function U want Like Shoot at here or something
-			
-			//Calling method for attack.
+            //Calling method for attack.
         }
-        //}
     }
 }
