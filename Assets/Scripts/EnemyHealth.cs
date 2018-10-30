@@ -4,6 +4,13 @@ public class EnemyHealth : MonoBehaviour
 {
     public int Health = 3;
 
+    private SaplingAttack SaplingAttack;
+
+    private void Awake()
+    {
+        this.SaplingAttack = GetComponent<SaplingAttack>();
+    }
+
     public void FixedUpdate()
     {
         if (this.Health <= 0)

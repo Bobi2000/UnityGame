@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SaplingAttack : MonoBehaviour
 {
-    public static bool IsAlive = true;
+    public bool IsAlive = true;
 
     public int MoveSpeed = 3;
 
