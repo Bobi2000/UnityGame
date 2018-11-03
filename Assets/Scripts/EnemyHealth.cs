@@ -2,7 +2,7 @@
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int Health = 3;
+    private float Health = 6;
 
     private SaplingAttack SaplingAttack;
 
@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.transform.tag == "PlayerBullet")
         {
             //damage
-            this.Health -= 1;
+            this.Health -= CharacterController.Damage;
         }
     }
 }
